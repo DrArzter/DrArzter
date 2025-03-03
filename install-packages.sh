@@ -102,7 +102,7 @@ install_packages() {
 
 #Set github name and email
 git config --global user.name "DrArzter"
-git config --global user.email "chapegarostislav@gmail"
+git config --global user.email "chapegarostislav@gmail.com"
 
 # Call the installation function
 install_packages
