@@ -56,7 +56,6 @@ PACMAN_PACKAGES=(
     "github-cli"
     "obs-studio"
     "jdk17-openjdk"
-    "nodejs"
     "npm"
     "solaar"
     "pinta"
@@ -84,7 +83,7 @@ AUR_PACKAGES=(
     "freeoffice"
     "vesktop"
     "aws-cli-v2"
-    "podman-desktop"
+    "podman-desktop-bin"
 )
 FLATPAK_PACKAGES=(
     "com.usebottles.bottles"
@@ -100,6 +99,11 @@ install_packages() {
         flatpak install flathub "$package" -y
     done
 }
+
+#Set github name and email
+git config --global user.name "DrArzter"
+git config --global user.email "chapegarostislav@gmail"
+
 # Call the installation function
 install_packages
 echo "All packages have been installed!"
