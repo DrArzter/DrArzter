@@ -1,0 +1,162 @@
+% Modern Resume in LaTeX
+% Based on AltaCV template with modifications
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Page layout - reduce margins further
+\geometry{left=0.7cm,right=0.7cm,top=0.7cm,bottom=0.7cm,columnsep=0.8cm}
+\usepackage{paracol}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+
+% Colors
+\definecolor{SlateGrey}{HTML}{2B2B2B}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelBlue}{HTML}{0277BD}
+\definecolor{GoldenBrown}{HTML}{CD8C00}
+\definecolor{LightCyan}{HTML}{E8F5E9}
+\definecolor{TagColor}{HTML}{F2F2F2}
+
+\colorlet{name}{black}
+\colorlet{tagline}{DarkPastelBlue}
+\colorlet{heading}{black}
+\colorlet{headingrule}{black}
+\colorlet{subheading}{DarkPastelBlue}
+\colorlet{accent}{DarkPastelBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the font
+\renewcommand{\familydefault}{\sfdefault}
+
+% New commands for skill tags
+\newcommand{\skill}[1]{%
+  \tikz[baseline=(char.base)]{\node[anchor=base, rounded corners=2pt, draw=gray!30, fill=TagColor, inner xsep=6pt, inner ysep=2pt, text height=1.5ex, text depth=.25ex] (char) {#1};}%
+}
+
+\newcommand{\link}[2]{%
+  \href{#1}{#2}%
+}
+
+% Header
+\name{Rostislav Chapeha}
+\tagline{Junior Fullstack Developer}
+
+% Contact info
+\personalinfo{%
+  \email{chapegarostislav@gmail.com}
+  \phone{+48 731 378 107}
+  \location{Poznan, Poland}
+  \\\vspace{0.05cm}
+}
+
+\begin{document}
+\makeheader{}
+
+\begin{paracol}{2}
+\begin{leftcolumn}
+\cvsection{EXPERIENCE}
+\cvevent{Data Scientist Intern}{OLX}{Jul 2024 -- Feb 2025}{}
+\begin{itemize}
+\item Developed a system for automatic floor plan processing and information extraction using computer vision techniques
+\item Deployed solutions on AWS infrastructure (EC2, S3) with high availability
+\item Integrated AWS Lambda functions and API Gateway for serverless architecture
+\item Trained and applied machine learning models to extract valuable information from floor plan images
+\end{itemize}
+\textbf{Technologies used:} Python, PyTorch, OpenCV, NumPy, pytesseract, AWS
+
+\divider
+
+\cvsection{EDUCATION}
+\cvevent{Bachelor of Science in Computer Science}{Poznan University of Technology}{Oct 2021 -- Feb 2025}{}
+\begin{itemize}
+\item Focus areas: Web Development, Software Architecture, Cloud Computing
+\item Relevant coursework: Algorithms, Data Structures, Distributed Systems
+\end{itemize}
+
+\divider
+
+\cvsection{PROJECTS}
+\cvevent{\href{https://pinpictures.ink/}{PinPictues}}{}{}{}
+\begin{itemize}
+\item Developed a complete social network functionality with friends system and notifications
+\item Created interactive content features with post creation and commenting system
+\item Implemented real-time communication using websockets
+\item Designed Windows-inspired UI theme with dark/light modes
+\item Engineered high-performance architecture with edge caching
+\end{itemize}
+
+\textbf{Technical highlights:}
+\begin{itemize}
+\item Built end-to-end type safety with TypeScript across frontend and backend
+\item Implemented Redis for session management and MySQL with Prisma ORM
+\item Developed modern React frontend with Next.js and Socket.IO
+\item Set up monitoring and CI/CD pipeline with automated deployment
+\end{itemize}
+
+\textbf{Technologies used:} TypeScript, Next.js, React, MySQL, Prisma ORM, Redis, Socket.IO, Cloudflare
+
+\textbf{Legacy versions:} Available on GitHub: \href{https://github.com/DrArzter/pinpictures-react}{React} and \href{https://github.com/DrArzter/pinpictures-node}{Node.js} versions
+
+\end{leftcolumn}
+
+\begin{rightcolumn}
+\cvsection{SUMMARY}
+I'm a passionate fullstack web developer with a strong dedication to creating responsive, user-friendly applications. My primary focus lies in web development, where I enjoy working with modern JavaScript frameworks and building complete solutions from frontend to backend. 
+
+While I've gained valuable experience as a data science intern, my career path is directed toward fullstack development, where I can leverage my technical skills to solve real-world problems.
+
+\textbf{Career Goals:} To grow as a fullstack developer working on challenging projects that push technological boundaries, with a focus on performance optimization.
+
+\divider
+
+\cvsection{SKILLS}
+\begin{tabular}{p{0.5\linewidth} p{0.5\linewidth}}
+\skill{JavaScript} & \skill{TypeScript} \vspace{0.1cm}\\
+\skill{React} & \skill{Next.js} \vspace{0.1cm}\\
+\skill{Node.js} & \skill{Express.js} \vspace{0.1cm}\\
+\skill{HTML} & \skill{CSS} \vspace{0.1cm}\\
+\skill{Python} & \skill{PyTorch} \vspace{0.1cm}\\
+\skill{OpenCV} & \skill{NumPy} \vspace{0.1cm}\\
+\skill{MySQL} & \skill{Redis} \vspace{0.1cm}\\
+\skill{Git} & \skill{Docker} \vspace{0.1cm}\\
+\skill{AWS} & \skill{EC2} \vspace{0.1cm}\\
+\skill{S3} & \skill{Lambda} \vspace{0.1cm}\\
+\skill{Socket.IO} & \skill{WebSockets} \vspace{0.1cm}\\
+\skill{Cloudflare} & \skill{CDN}
+\end{tabular}
+
+\divider
+
+\cvsection{LANGUAGES}
+\begin{tabular}{p{0.4\linewidth} p{0.6\linewidth}}
+\textbf{Belarusian} & Native \\
+\textbf{English} & Advanced \\
+\textbf{Russian} & Native \\
+\textbf{Polish} & Advanced
+\end{tabular}
+
+\divider
+
+\cvsection{SOFT SKILLS}
+\begin{itemize}
+\item Strong problem-solving abilities and analytical thinking
+\item Excellent communication and collaboration in team settings
+\item Self-motivated with a continuous learning mindset
+\item Adaptable to new technologies and changing requirements
+\end{itemize}
+
+\divider
+
+\cvsection{CONTACT}
+\begin{tabular}{p{0.3\linewidth} >{\raggedright\arraybackslash}p{0.7\linewidth}}
+\textbf{Email:}\hspace{0.5cm} & chapegarostislav@gmail.com \\
+\textbf{GitHub:}\hspace{0.5cm} & \raisebox{0pt}[0pt][0pt]{\href{https://github.com/DrArzter}{DrArzter}} \\
+\textbf{LinkedIn:}\hspace{0.5cm} & rastsislau-chapeha-0302b4255 \\
+\textbf{Discord:}\hspace{0.5cm} & drarzter \\
+\textbf{Phone/Telegram:}\hspace{0.5cm} & +48731378107
+\end{tabular}
+
+\end{rightcolumn}
+\end{paracol}
+\end{document} 
