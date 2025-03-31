@@ -70,8 +70,10 @@ PACMAN_PACKAGES=(
     "firefox"
     "zerotier-one"
     "smartmontools"
+    "mission-center"
 )
 AUR_PACKAGES=(
+    "czkawka-gui"
     "zoom"
     "viber"
     "anydesk-bin"
@@ -82,6 +84,7 @@ AUR_PACKAGES=(
     "haguichi"
     "freeoffice"
     "vesktop"
+    "kando-bin"
     "aws-cli-v2"
     "podman-desktop-bin"
 )

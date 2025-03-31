@@ -8,6 +8,21 @@
 \usepackage{paracol}
 \usepackage{fontawesome5}
 \usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{url}
+
+% Configure hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=DarkPastelBlue,
+    filecolor=DarkPastelBlue,
+    urlcolor=DarkPastelBlue,
+    citecolor=DarkPastelBlue,
+    pdftitle={Rostislav Chapeha - Resume},
+    pdfauthor={Rostislav Chapeha},
+    pdfsubject={Resume},
+    pdfkeywords={resume, web development, fullstack}
+}
 
 % Colors
 \definecolor{SlateGrey}{HTML}{2B2B2B}
@@ -40,7 +55,7 @@
 
 % Header
 \name{Rostislav Chapeha}
-\tagline{Junior Fullstack Developer}
+\tagline{Fullstack Developer}
 
 % Contact info
 \personalinfo{%
@@ -77,7 +92,7 @@
 \divider
 
 \cvsection{PROJECTS}
-\cvevent{\href{https://pinpictures.ink/}{PinPictues}}{}{}{}
+\cvevent{\url{https://pinpictures.ink/}}{PinPictues}{}{}
 \begin{itemize}
 \item Developed a complete social network functionality with friends system and notifications
 \item Created interactive content features with post creation and commenting system
@@ -96,11 +111,23 @@
 
 \textbf{Technologies used:} TypeScript, Next.js, React, MySQL, Prisma ORM, Redis, Socket.IO, Cloudflare
 
-\textbf{Legacy versions:} Available on GitHub: \href{https://github.com/DrArzter/pinpictures-react}{React} and \href{https://github.com/DrArzter/pinpictures-node}{Node.js} versions
+\textbf{Legacy versions:} Both React and Node.js versions are available on GitHub.
 
 \end{leftcolumn}
 
 \begin{rightcolumn}
+
+  \cvsection{CONTACT}
+  \begin{tabular}{p{0.3\linewidth} >{\raggedright\arraybackslash}p{0.7\linewidth}}
+  \textbf{Email:}\hspace{0.5cm} & chapegarostislav@gmail.com \\
+  \textbf{GitHub:}\hspace{0.5cm} & \url{https://github.com/DrArzter} \\
+  \textbf{LinkedIn:}\hspace{0.5cm} & \url{https://www.linkedin.com/in/drarzter} \\
+  \textbf{Discord:}\hspace{0.5cm} & drarzter \\
+  \textbf{Phone/Telegram:}\hspace{0.5cm} & +48731378107
+  \end{tabular}
+
+\divider
+
 \cvsection{SUMMARY}
 I'm a passionate fullstack web developer with a strong dedication to creating responsive, user-friendly applications. My primary focus lies in web development, where I enjoy working with modern JavaScript frameworks and building complete solutions from frontend to backend. 
 
@@ -145,17 +172,6 @@ While I've gained valuable experience as a data science intern, my career path i
 \item Self-motivated with a continuous learning mindset
 \item Adaptable to new technologies and changing requirements
 \end{itemize}
-
-\divider
-
-\cvsection{CONTACT}
-\begin{tabular}{p{0.3\linewidth} >{\raggedright\arraybackslash}p{0.7\linewidth}}
-\textbf{Email:}\hspace{0.5cm} & chapegarostislav@gmail.com \\
-\textbf{GitHub:}\hspace{0.5cm} & \raisebox{0pt}[0pt][0pt]{\href{https://github.com/DrArzter}{DrArzter}} \\
-\textbf{LinkedIn:}\hspace{0.5cm} & rastsislau-chapeha-0302b4255 \\
-\textbf{Discord:}\hspace{0.5cm} & drarzter \\
-\textbf{Phone/Telegram:}\hspace{0.5cm} & +48731378107
-\end{tabular}
 
 \end{rightcolumn}
 \end{paracol}
