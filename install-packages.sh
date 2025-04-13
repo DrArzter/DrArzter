@@ -67,7 +67,7 @@ PACMAN_PACKAGES=(
     "podman-compose"
     "docker"
     "docker-compose"
-    "firefox"
+    "firefox-developer-edition"
     "zerotier-one"
     "smartmontools"
     "mission-center"
