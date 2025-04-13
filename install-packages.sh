@@ -87,6 +87,7 @@ AUR_PACKAGES=(
     "kando-bin"
     "aws-cli-v2"
     "podman-desktop-bin"
+    "upscayl-bin"
 )
 FLATPAK_PACKAGES=(
     "com.usebottles.bottles"
