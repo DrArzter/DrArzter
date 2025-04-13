@@ -1,0 +1,50 @@
+/* userChrome.css */
+
+/* Making navbar, tab bar and other UI elements transparent */
+window, #main-window, #toolbar-menubar, #TabsToolbar, #PersonalToolbar, #navigator-toolbox, #sidebar-box {
+    background-color: rgba(41, 47, 52, 0.4) !important;
+    -moz-appearance: none !important;
+    background-image: none !important;
+}
+
+/* Navigation bar styling */
+#nav-bar {
+background-color: rgba(33, 37, 41, 0.5) !important;
+-moz-appearance: none !important;
+background-image: none !important;
+}
+
+/* Active tab styling to match navbar */
+.tab-background[selected="true"] {
+    background-color: rgba(33, 37, 41, 0.5) !important; /* Same as nav-bar */
+    -moz-appearance: none !important;
+    background-image: none !important;
+}
+
+/* Remove the separator between tabs and navbar */
+#navigator-toolbox {
+--tabs-border-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* Fix for white line between content and UI */
+#appcontent {
+background: transparent !important;
+}
+
+/* Download button styling */
+#downloads-button[attention="success"] > .toolbarbutton-badge-stack,
+#downloads-button[notification="finished"] > .toolbarbutton-badge-stack {
+background-color: #1abc9c !important;
+}
+
+/* Additional fixes for any remaining borders */
+#browser-panel {
+border: none !important;
+}
+
+/* For dropdown menus transparency */
+menupopup, panel {
+    background-color: rgba(41, 47, 52, 0.85) !important;
+    backdrop-filter: blur(5px) !important;
+    border: 1px solid rgba(80, 80, 80, 0.3) !important;
+}

@@ -1,0 +1,27 @@
+/* userContent.css */
+
+/* New tab page transparency */
+@-moz-document url("about:newtab"), url("about:home") {
+    body {
+        background: rgba(41, 47, 52, 0.4) !important;
+    }
+
+    /* Make all cards on new tab page semi-transparent with teal highlights */
+    .top-site-outer .tile,
+    .card {
+        background-color: rgba(33, 37, 41, 0.7) !important;
+        border-radius: 8px !important;
+    }
+
+    /* Teal highlight when hovering over items */
+    .top-site-outer:hover .tile,
+    .card:hover {
+        box-shadow: 0 0 0 5px rgba(26, 188, 156, 0.3) !important;
+    }
+
+    /* Change any blue highlights to teal */
+    :root {
+        --newtab-primary-action-background: #1abc9c !important;
+        --newtab-link-primary-color: #1abc9c !important;
+    }
+}
