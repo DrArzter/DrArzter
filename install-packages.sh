@@ -71,6 +71,7 @@ PACMAN_PACKAGES=(
     "zerotier-one"
     "smartmontools"
     "mission-center"
+    "libreoffice-fresh"
 )
 AUR_PACKAGES=(
     "czkawka-gui"
@@ -82,7 +83,6 @@ AUR_PACKAGES=(
     "visual-studio-code-bin"
     "postman-bin"
     "haguichi"
-    "freeoffice"
     "vesktop"
     "kando-bin"
     "aws-cli-v2"
