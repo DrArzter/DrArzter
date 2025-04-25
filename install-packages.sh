@@ -89,9 +89,6 @@ AUR_PACKAGES=(
     "podman-desktop-bin"
     "upscayl-bin"
 )
-FLATPAK_PACKAGES=(
-    "com.usebottles.bottles"
-)
 # Install packages
 install_packages() {
     echo "Installing pacman packages..."
@@ -99,9 +96,6 @@ install_packages() {
     echo "Installing AUR packages..."
     yay -S --needed "${AUR_PACKAGES[@]}"
     echo "Installing flatpak packages..."
-    for package in "${FLATPAK_PACKAGES[@]}"; do
-        flatpak install flathub "$package" -y
-    done
 }
 
 #Set github name and email
