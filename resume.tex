@@ -21,7 +21,7 @@
     pdftitle={Rostislav Chapeha - Resume},
     pdfauthor={Rostislav Chapeha},
     pdfsubject={Resume},
-    pdfkeywords={resume, web development, fullstack}
+    pdfkeywords={resume, web development, fullstack, backend, frontend, junior}
 }
 
 % Colors
@@ -71,12 +71,29 @@
 \begin{paracol}{2}
 \begin{leftcolumn}
 \cvsection{EXPERIENCE}
-\cvevent{Data Scientist Intern}{OLX}{Jul 2024 -- Feb 2025}{}
+\cvevent{Lead Developer (Pet Project)}{PinPictures (\url{https://pinpictures.ink})}{2023 -- Present}{}
+\url{https://github.com/DrArzter/PinPictures}
+\begin{itemize}
+\item Led backend development of a full-featured social network with real-time capabilities
+\item Architected end-to-end type-safe system and high-performance infrastructure
+\item Implemented real-time features using WebSocket and modern UI with dark/light modes
+\item Designed and deployed scalable architecture with edge caching, CDN and S3 storage
+\item Built complete social network features including friends system and notifications
+\item Set up automated deployment pipeline with Docker
+\item Optimized application performance through code splitting and lazy loading
+\end{itemize}
+\textbf{Technologies used:} TypeScript, Next.js, React, MySQL, Prisma ORM, Redis, Socket.IO, Cloudflare, AWS S3
+
+\divider
+
+\cvevent{Fullstack developer}{OLX}{Jul 2024 -- Feb 2025}{}
 \begin{itemize}
 \item Developed a system for automatic floor plan processing and information extraction using computer vision techniques
 \item Deployed solutions on AWS infrastructure (EC2, S3) with high availability
 \item Integrated AWS Lambda functions and API Gateway for serverless architecture
 \item Trained and applied machine learning models to extract valuable information from floor plan images
+\item Implemented robust error handling and logging system
+\item Optimized model performance and reduced processing time
 \end{itemize}
 \textbf{Technologies used:} Python, PyTorch, OpenCV, NumPy, pytesseract, AWS
 
@@ -91,76 +108,56 @@
 
 \divider
 
-\cvsection{PROJECTS}
-\cvevent{\url{https://pinpictures.ink/}}{PinPictues}{}{}
-\begin{itemize}
-\item Developed a complete social network functionality with friends system and notifications
-\item Created interactive content features with post creation and commenting system
-\item Implemented real-time communication using websockets
-\item Designed Windows-inspired UI theme with dark/light modes
-\item Engineered high-performance architecture with edge caching
-\end{itemize}
-
-\textbf{Technical highlights:}
-\begin{itemize}
-\item Built end-to-end type safety with TypeScript across frontend and backend
-\item Implemented Redis for session management and MySQL with Prisma ORM
-\item Developed modern React frontend with Next.js and Socket.IO
-\item Set up monitoring and CI/CD pipeline with automated deployment
-\end{itemize}
-
-\textbf{Technologies used:} TypeScript, Next.js, React, MySQL, Prisma ORM, Redis, Socket.IO, Cloudflare
-
-\textbf{Legacy versions:} Both React and Node.js versions are available on GitHub.
+\cvsection{LANGUAGES}
+\begin{tabular}{p{0.4\linewidth} p{0.6\linewidth}}
+\textbf{English} & C1 \\
+\textbf{Polish} & C1 \\
+\end{tabular}
 
 \end{leftcolumn}
 
 \begin{rightcolumn}
 
-  \cvsection{CONTACT}
-  \begin{tabular}{p{0.3\linewidth} >{\raggedright\arraybackslash}p{0.7\linewidth}}
-  \textbf{Email:}\hspace{0.5cm} & chapegarostislav@gmail.com \\
-  \textbf{GitHub:}\hspace{0.5cm} & \url{https://github.com/DrArzter} \\
-  \textbf{LinkedIn:}\hspace{0.5cm} & \url{https://www.linkedin.com/in/drarzter} \\
-  \textbf{Discord:}\hspace{0.5cm} & drarzter \\
-  \textbf{Phone/Telegram:}\hspace{0.5cm} & +48731378107
-  \end{tabular}
-
-\divider
-
-\cvsection{SUMMARY}
-I'm a passionate fullstack web developer with a strong dedication to creating responsive, user-friendly applications. My primary focus lies in web development, where I enjoy working with modern JavaScript frameworks and building complete solutions from frontend to backend. 
-
-While I've gained valuable experience as a data science intern, my career path is directed toward fullstack development, where I can leverage my technical skills to solve real-world problems.
-
-\textbf{Career Goals:} To grow as a fullstack developer working on challenging projects that push technological boundaries, with a focus on performance optimization.
-
-\divider
-
 \cvsection{SKILLS}
 \begin{tabular}{p{0.5\linewidth} p{0.5\linewidth}}
+\skill{Python} & \skill{PyTorch} \vspace{0.1cm}\\
+\skill{OpenCV} & \skill{NumPy} \vspace{0.1cm}\\
+\skill{FastAPI} & \skill{Django} \vspace{0.1cm}\\
+\skill{Pytest} & \skill{Git} \vspace{0.1cm}\\
+\skill{Docker} & \skill{CDN} \vspace{0.1cm}\\
+\skill{Socket.IO} & \skill{WebSockets} \vspace{0.1cm}\\
 \skill{JavaScript} & \skill{TypeScript} \vspace{0.1cm}\\
 \skill{React} & \skill{Next.js} \vspace{0.1cm}\\
 \skill{Node.js} & \skill{Express.js} \vspace{0.1cm}\\
 \skill{HTML} & \skill{CSS} \vspace{0.1cm}\\
-\skill{Python} & \skill{PyTorch} \vspace{0.1cm}\\
-\skill{OpenCV} & \skill{NumPy} \vspace{0.1cm}\\
 \skill{MySQL} & \skill{Redis} \vspace{0.1cm}\\
-\skill{Git} & \skill{Docker} \vspace{0.1cm}\\
 \skill{AWS} & \skill{EC2} \vspace{0.1cm}\\
 \skill{S3} & \skill{Lambda} \vspace{0.1cm}\\
-\skill{Socket.IO} & \skill{WebSockets} \vspace{0.1cm}\\
-\skill{Cloudflare} & \skill{CDN}
+\skill{Cloudflare} & \skill{GCP} \vspace{0.1cm}\\
+\skill{VueJS} & \skill{React Native} \vspace{0.1cm}\\
+\skill{Linux} & \skill{Windows} \vspace{0.1cm}\\
 \end{tabular}
 
 \divider
 
-\cvsection{LANGUAGES}
-\begin{tabular}{p{0.4\linewidth} p{0.6\linewidth}}
-\textbf{Belarusian} & Native \\
-\textbf{English} & Advanced \\
-\textbf{Russian} & Native \\
-\textbf{Polish} & Advanced
+\cvsection{SUMMARY}
+I'm a passionate fullstack developer with a strong dedication to building responsive, user-friendly applications. My main focus is on fullstack development, where I enjoy using modern JavaScript and Python frameworks and libraries to create end-to-end solutions — from frontend to backend.
+
+Through my experience at OLX and personal projects like PinPictures, I've developed expertise in both frontend and backend development. My career path is oriented toward fullstack development, where I can apply my technical expertise to solve real-world challenges.
+
+I specialize in building scalable applications with a focus on performance optimization and clean architecture. My experience spans from developing real-time features to implementing complex data processing systems, always with an emphasis on code quality and maintainability.
+
+\textbf{Career Goals:} To grow as a fullstack developer by working on challenging, impactful projects — with a strong focus on performance optimization and pushing technological boundaries.
+
+\divider
+
+\cvsection{CONTACT}
+\begin{tabular}{p{0.3\linewidth} >{\raggedright\arraybackslash}p{0.7\linewidth}}
+\textbf{Email:}\hspace{0.5cm} & chapegarostislav@gmail.com \\
+\textbf{GitHub:}\hspace{0.5cm} & \url{https://github.com/DrArzter} \\
+\textbf{LinkedIn:}\hspace{0.5cm} & \url{https://www.linkedin.com/in/drarzter} \\
+\textbf{Discord:}\hspace{0.5cm} & drarzter \\
+\textbf{Phone/Telegram:}\hspace{0.5cm} & +48731378107
 \end{tabular}
 
 \divider
