@@ -6,7 +6,7 @@
 
 ###
 
-<p align="left">🔭 I’m currently working on PinPictures<br>    🌱 I’m currently learning TypeScript and Next.js<br>    👯 I’m looking to collaborate on web development projects<br>    🤔 I’m looking for help with building scalable backend systems<br>    💬 Ask me about React, web development, or anything tech-related<br>    📫 How to reach me: chapegarostislav@gmail.com<br>    😄 Pronouns: he/him<br>    ⚡ Fun fact: I love solving complex puzzles and challenges in both tech and life!</p>
+<p align="left">🌱 I’m currently learning TypeScript, Python and Next.js<br>    👯 I’m looking to collaborate on web development projects<br>    🤔 I’m looking for help with building scalable backend systems<br>    💬 Ask me about React, web development, or anything tech-related<br>    📫 How to reach me: chapegarostislav@gmail.com<br>    😄 Pronouns: he/him<br></p>
 
 ###
 
