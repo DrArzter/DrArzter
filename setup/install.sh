@@ -104,7 +104,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 if ((${#selected_pkgs[@]} > 0)); then
     echo -e "\n${GREEN}Installing ${#selected_pkgs[@]} packages...${NC}"
     for pkg in "${selected_pkgs[@]}"; do
-        if yay -S --needed --noconfirm "$pkg" &>/dev/null; then
+        if yay -S --needed --noconfirm --answerdiff=None --answerclean=None --removemakeddeps "$pkg"; then
             echo -e "${GREEN}  ✓ ${pkg}${NC}"
         else
             echo -e "${RED}  ✗ ${pkg}${NC}"
