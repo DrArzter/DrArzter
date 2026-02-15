@@ -8,7 +8,7 @@ apply_fixes() {
             huawei-sound-fix)
                 echo -e "${YELLOW}Applying Huawei Matebook sound fix...${NC}"
                 git clone https://github.com/Smoren/huawei-ubuntu-sound-fix /tmp/huawei-sound-fix
-                (cd /tmp/huawei-sound-fix && ./install.sh)
+                (cd /tmp/huawei-sound-fix && chmod u+x ./install.sh && ./install.sh)
                 rm -rf /tmp/huawei-sound-fix
                 ;;
         esac
