@@ -8,6 +8,7 @@ POST_TASKS=(
     "git-config:Git config (name + email):git config --global user.name DrArzter && git config --global user.email chapegarostislav@gmail.com"
     "docker-enable:Enable Docker daemon:sudo systemctl enable --now docker.service"
     "docker-group:Add user to docker group:sudo usermod -aG docker $USER"
+    "podman-socket:Enable Podman socket (user):systemctl --user enable --now podman.socket"
     "zerotier-enable:Enable ZeroTier daemon:sudo systemctl enable --now zerotier-one.service"
 )
 
