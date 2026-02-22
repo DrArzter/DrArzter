@@ -32,6 +32,7 @@ PACKAGES=(
     "jdk21-openjdk"
     "pyenv"
     "pandoc"
+    "azuredatastudio-bin"
 
     # Containers
     "docker"
