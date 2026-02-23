@@ -33,6 +33,7 @@ PACKAGES=(
     "pyenv"
     "pandoc"
     "azuredatastudio-bin"
+    "librdkafka"
 
     # Containers
     "docker"
