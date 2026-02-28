@@ -67,4 +67,5 @@ PACKAGES=(
     "lsfg-vk"
     "tailscale"
     "ktailctl"
+    "filezilla"
 )
