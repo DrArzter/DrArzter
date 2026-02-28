@@ -25,7 +25,6 @@ PACKAGES=(
     # Dev tools
     "visual-studio-code-bin"
     "opencode-bin"
-    "claude-code"
     "postman-bin"
     "github-cli"
     "npm"
@@ -66,4 +65,6 @@ PACKAGES=(
     "sshx"
     "ngrok"
     "lsfg-vk"
+    "tailscale"
+    "ktailctl"
 )

@@ -10,6 +10,7 @@ POST_TASKS=(
     "docker-group:Add user to docker group:sudo usermod -aG docker $USER"
     "podman-socket:Enable Podman socket (user):systemctl --user enable --now podman.socket"
     "zerotier-enable:Enable ZeroTier daemon:sudo systemctl enable --now zerotier-one.service"
+    "tailscale-enable:Enable Tailscale daemon:sudo systemctl enable --now tailscaled.service"
 )
 
 run_post_setup() {
