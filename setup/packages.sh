@@ -24,6 +24,7 @@ PACKAGES=(
 
     # Dev tools
     "visual-studio-code-bin"
+    "claude-desktop-bin"
     "opencode-bin"
     "postman-bin"
     "github-cli"
