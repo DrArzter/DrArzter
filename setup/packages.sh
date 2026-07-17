@@ -19,13 +19,14 @@ PACKAGES=(
     # Communication
     "telegram-desktop"
     "vesktop"
+    "discord"
     "zoom"
     "anydesk-bin"
 
     # Dev tools
     "visual-studio-code-bin"
+    "openai-codex-desktop"
     "claude-desktop-bin"
-    "opencode-bin"
     "postman-bin"
     "github-cli"
     "npm"
@@ -34,6 +35,7 @@ PACKAGES=(
     "pandoc"
     "azuredatastudio-bin"
     "librdkafka"
+    "android-sdk-cmdline-tools-latest"
 
     # Containers
     "docker"
@@ -69,4 +71,6 @@ PACKAGES=(
     "tailscale"
     "ktailctl"
     "filezilla"
+    "python-pyqt6"
+    "python-pyqt5"
 )
