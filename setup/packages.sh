@@ -73,4 +73,13 @@ PACKAGES=(
     "filezilla"
     "python-pyqt6"
     "python-pyqt5"
+
+    # Theming — everything setup/style.sh expects to be present
+    "plasma6-themes-orchis-kde-git" # Plasma: global theme, Aurorae, Kvantum, SDDM, colour schemes
+    "orchis-theme"                  # the same look for GTK3/GTK4
+    "kvantum"                       # Qt style engine
+    "kvantum-qt5"
+    "tela-circle-icon-theme-all-git"
+    "vimix-cursors-git" # orphaned in the AUR, still the only package for it
+    "graphite-grub-theme-default-4k"
 )
