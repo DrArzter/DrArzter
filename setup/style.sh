@@ -18,6 +18,7 @@ set -uo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 STYLE_DIR="$(cd "$SCRIPT_DIR/.." && pwd)/style"
+FIREFOX_CSS_DIR="$(cd "$SCRIPT_DIR/.." && pwd)/FirefoxCSS"
 
 # shellcheck source=colors.sh
 . "$SCRIPT_DIR/colors.sh"
@@ -208,6 +209,50 @@ link_gtk4() {
     ok "GTK4 assets linked"
 }
 
+# Firefox names its profile directory at random and ignores userChrome.css
+# unless a pref is set, so both have to be resolved when applying.
+firefox_profiles() {
+    local ini="$HOME/.mozilla/firefox/profiles.ini"
+
+    [ -f "$ini" ] || return 0
+
+    # Install sections carry the profile each installed Firefox opens; a bare
+    # "Default=1" has no dot and is skipped.
+    sed -n 's/^Default=\(.*\..*\)$/\1/p' "$ini" | sort -u
+}
+
+apply_firefox_css() {
+    local profile
+    local target
+
+    if [ ! -d "$FIREFOX_CSS_DIR" ]; then
+        skip "Firefox CSS (FirefoxCSS/ is missing)"
+        return 0
+    fi
+
+    for profile in $(firefox_profiles); do
+        target="$HOME/.mozilla/firefox/$profile"
+        [ -d "$target" ] || continue
+
+        copy "$FIREFOX_CSS_DIR/userChrome.css" "$target/chrome/userChrome.css"
+        copy "$FIREFOX_CSS_DIR/userContent.css" "$target/chrome/userContent.css"
+
+        if [ "$DRY_RUN" = 1 ]; then
+            echo -e "${DIM}  would set: toolkit.legacyUserProfileCustomizations.stylesheets in ${profile}/user.js${NC}"
+            continue
+        fi
+
+        if grep -qs legacyUserProfileCustomizations "$target/user.js"; then
+            skip "${profile}/user.js (pref already set)"
+        elif echo 'user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);' \
+            >>"$target/user.js"; then
+            ok "${profile}/user.js"
+        else
+            fail "${profile}/user.js"
+        fi
+    done
+}
+
 apply_style() {
     local item
 
@@ -215,6 +260,9 @@ apply_style() {
     run "global theme ($LOOK_AND_FEEL)" plasma-apply-lookandfeel -a "$LOOK_AND_FEEL"
     run "Kvantum theme ($KVANTUM_THEME)" kvantummanager --set "$KVANTUM_THEME"
     link_gtk4
+
+    note "Firefox chrome"
+    apply_firefox_css
 
     # After the global theme, never before: applying it overwrites the colour
     # scheme and the widget style with the theme's own defaults.
