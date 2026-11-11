@@ -11,6 +11,8 @@ POST_TASKS=(
     "podman-socket:Enable Podman socket (user):systemctl --user enable --now podman.socket"
     "zerotier-enable:Enable ZeroTier daemon:sudo systemctl enable --now zerotier-one.service"
     "tailscale-enable:Enable Tailscale daemon:sudo systemctl enable --now tailscaled.service"
+    "style-apply:Apply the saved desktop style:bash $SCRIPT_DIR/style.sh apply"
+    "grub-theme:Graphite GRUB theme at 4K:sudo sed -i -e 's|^GRUB_THEME=.*|GRUB_THEME=/usr/share/grub/themes/graphite-default-4k/theme.txt|' -e 's|^GRUB_GFXMODE=.*|GRUB_GFXMODE=3840x2160,1920x1080,auto|' /etc/default/grub && sudo grub-mkconfig -o /boot/grub/grub.cfg"
 )
 
 run_post_setup() {
